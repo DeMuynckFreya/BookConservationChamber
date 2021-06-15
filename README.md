@@ -12,5 +12,6 @@ Using the keypad, the lock can be opened.
 
 Here you can find all the code related to this project.
 The code needed for the ESP32 can be found in the folder "espcodeproject".
-The accesscode for the keypad can be changed in app.py.
+
+The access code for the keypad can be changed in app.py.
 Change the username and password in config.py to your login information.
