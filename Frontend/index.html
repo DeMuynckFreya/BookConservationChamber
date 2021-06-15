@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Book Conservation Chamber</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zgh8pul.css">
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/screen.css" />
+
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js" integrity="sha384-LzhRnpGmQP+lOvWruF/lgkcqD+WDVt9fU3H4BWmwP5u5LTmkUGafMcpZKNObVMLU" crossorigin="anonymous"></script>
+    <script src="script/app.js"></script> 
+    <script src="script/home.js"></script>
+  </head>
+  <body>
+    <div class="c-page">
+        <header class="o-row o-row--md o-row--header">
+            <div class="o-container">
+                <div class="c-header">
+                    <div class="c-header__logo">
+                        <h1 class="c-logo"><a href="index.html" class="c-logo__link">
+                            Book Conservation Chamber</a>
+                        </h1>
+                    </div>
+                    <div class="c-header__nav c-header__nav--main">
+                        <nav class="c-nav">
+                            <ul class="o-list c-nav__list">
+                                <li class="c-nav__item is-selected"><a href="index.html" class="c-nav__link">Home</a></li>
+                                <li class="c-nav__item"><a href="history.html" class="c-nav__link">History</a></li>
+                                <li class="c-nav__item"><a href="books.html" class="c-nav__link">Books</a></li>
+                                <li class="c-nav__item"><a href="newbook.html" class="c-nav__link">New book</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="c-header__mobile-nav-trigger">
+                        <button class="o-button-reset c-nav-trigger js-toggle-nav">
+                            <svg class="c-nav-trigger__svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="o-row o-row--lg u-pt-clear">
+          <div class="o-container">
+            
+              <section class="o-row o-row--lg ">
+                <div class="o-layout o-layout--gutter-lg">
+                  <article class="c-status o-layout__item u-1-of-3-bp2" >
+                      <h2>Temperature</h2>
+                      <div class="o-layout o-layout--justify-space-evenly ">
+                      <p class="js-temp c-status-home">... °C</p> 
+                      <svg xmlns="http://www.w3.org/2000/svg" height="80px" viewBox="0 0 24 24" width="80px" fill="#14213D">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M15 13V5c0-1.66-1.34-3-3-3S9 3.34 9 5v8c-1.21.91-2 2.37-2 4 0 2.76 2.24 5 5 5s5-2.24 5-5c0-1.63-.79-3.09-2-4zm-4-8c0-.55.45-1 1-1s1 .45 1 1h-1v1h1v2h-1v1h1v2h-2V5z"/>
+                        </svg></div>
+                    </article>
+              
+              
+                  <article class="c-status o-layout__item u-1-of-3-bp2" >
+                      <h2>Humidity</h2>
+                      <div class="o-layout o-layout--justify-space-evenly ">
+                          <p class="js-humid c-status-home">... %</p>
+                          <svg class="c-svg-home" xmlns="http://www.w3.org/2000/svg" height="80px" viewBox="0 0 24 24" width="80px" fill="#14213D"><rect fill="none" height="24" width="24"/>
+                            <path d="M12,2c-5.33,4.55-8,8.48-8,11.8c0,4.98,3.8,8.2,8,8.2s8-3.22,8-8.2C20,10.48,17.33,6.55,12,2z M12,20c-3.35,0-6-2.57-6-6.2 c0-2.34,1.95-5.44,6-9.14c4.05,3.7,6,6.79,6,9.14C18,17.43,15.35,20,12,20z M7.83,14c0.37,0,0.67,0.26,0.74,0.62 c0.41,2.22,2.28,2.98,3.64,2.87c0.43-0.02,0.79,0.32,0.79,0.75c0,0.4-0.32,0.73-0.72,0.75c-2.13,0.13-4.62-1.09-5.19-4.12 C7.01,14.42,7.37,14,7.83,14z"/>
+                        </svg>
+
+                      </div>
+                    </article>
+              
+                  <article class="c-status o-layout__item u-1-of-3-bp2" >
+                      <h2>Luminance</h2>
+                      <div class="o-layout o-layout--justify-space-evenly ">
+                      <p class="js-lumin c-status-home">... %</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" height="80px" viewBox="0 0 24 24" width="80px" fill="#14213D"><path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6.5c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5zm0 9c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                    </svg></div>
+                    </article>
+              </div>
+
+            </section>
+            <section class="o-container ">
+                <div class="o-layout o-buttons">
+                    <button class="o-button-reset o-button o-layout__item js-fan-btn" data-idcomponent="7">change fan</button>
+                    <!-- <button class="o-button-reset o-button o-layout__item js-lock-btn" data-idcomponent="6">change lock</button> -->
+                </div>
+                
+              </section >
+              <section class="o-container">
+                <div >
+                    <table class="js-books">
+                        <tr>
+                            <td>Loading books present in chamber...</td>
+                        </tr>
+                    </table>
+                </div>
+              </section>
+          </div>
+        </section>
+        <footer class="o-row o-row--md">
+            <div class="o-container">
+                <div class="c-footer">
+                    <div class="c-footer__logo">
+                        <p class="c-logo"><a href="index.html" class="c-logo__link">
+                            Book Conservation Chamber</a>
+                          </p>
+                    </div>
+                    <div class="c-footer__nav">
+                      <nav class="c-nav c-nav--meta">
+                          <ul class="o-list c-nav__list">
+                            <li class="c-nav__item"><a href="https://freyademuynck.be/portfolio/" target="_blank" rel="noopener noreferrer" class="c-nav__link c-nav__link--meta">Portfolio</a></li>
+                            <!-- <li class="c-nav__item"><a href="https://github.com/howest-mct/2020-2021-projectone-DeMuynckFreya" target="_blank" rel="noopener noreferrer" class="c-nav__link c-nav__link--meta">Github</a></li> -->
+                          </ul>
+                        </nav>
+                      </div>
+                      <div class="c-footer__nav">
+                        <nav class="c-nav c-nav--meta">
+                          <ul class="o-list c-nav__list">
+                            <!-- <li class="c-nav__item"><a href="#!" target="_blank" rel="noopener noreferrer" class="c-nav__link c-nav__link--meta">Instructable</a></li> -->
+                            <li class="c-nav__item"><a href="https://www.facebook.com/freya.demuynck.9" target="_blank" rel="noopener noreferrer" class="c-nav__link c-nav__link--meta">Facebook</a></li>
+                          </ul>
+                      </nav>
+                  </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <aside class="c-mobile-nav">
+        <div class="c-mobile-nav__bg"></div>
+        <div class="c-mobile-nav__body">
+            <div class="c-mobile-nav__header">
+                <p class="c-logo"><a href="index.html" class="c-logo__link">
+                    Book Conservation Chamber</a>
+                  </p>
+                <button class="o-button-reset c-nav-trigger js-toggle-nav">
+                    <svg class="c-nav-trigger__svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="c-mobile-nav__nav c-mobile-nav__nav--main">
+                <nav class="c-nav">
+                    <ul class="o-list c-nav__list">
+                      <li class="c-nav__item is-selected"><a href="index.html" class="c-nav__link">Home</a></li>
+                      <li class="c-nav__item"><a href="history.html" class="c-nav__link">History</a></li>
+                      <li class="c-nav__item"><a href="books.html" class="c-nav__link">Books</a></li>
+                      <li class="c-nav__item"><a href="newbook.html" class="c-nav__link">New book</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </aside>
+</body>
+</html>

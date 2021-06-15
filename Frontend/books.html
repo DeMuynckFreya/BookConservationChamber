@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Book Conservation Chamber</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zgh8pul.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/screen.css" />
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js" integrity="sha384-LzhRnpGmQP+lOvWruF/lgkcqD+WDVt9fU3H4BWmwP5u5LTmkUGafMcpZKNObVMLU" crossorigin="anonymous"></script>
+    <script src="script/app.js"></script> 
+    <script src="script/books.js"></script>
+  </head>
+  <body>
+    <div class="c-page">
+      <header class="o-row o-row--md o-row--header">
+          <div class="o-container">
+              <div class="c-header">
+                  <div class="c-header__logo">
+                      
+                        <h1 class="c-logo"><a href="index.html" class="c-logo__link">
+                          Book Conservation Chamber</a>
+                      </h1>
+                      
+                  </div>
+                  <div class="c-header__nav c-header__nav--main">
+                      <nav class="c-nav">
+                          <ul class="o-list c-nav__list">
+                              <li class="c-nav__item"><a href="index.html" class="c-nav__link">Home</a></li>
+                              <li class="c-nav__item"><a href="history.html" class="c-nav__link">History</a></li>
+                              <li class="c-nav__item is-selected"><a href="books.html" class="c-nav__link">Books</a></li>
+                              <li class="c-nav__item"><a href="newbook.html" class="c-nav__link">New book</a></li>
+                          </ul>
+                      </nav>
+                  </div>
+                  <div class="c-header__mobile-nav-trigger">
+                      <button class="o-button-reset c-nav-trigger js-toggle-nav">
+                          <svg class="c-nav-trigger__svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                          </svg>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </header>
+        <!-- <section class="o-row">
+          <div class="o-container">
+            <table class="js-tablebooks">
+              <tr >
+                <td >Loading books...</td>
+              </tr>
+            </table>
+          </div>
+        </section> -->
+
+       
+        <section class="o-row o-container ">
+          
+          <div class="o-layout o-layout--gutter-lg js-books">
+            
+            <!-- <article class="o-layout__item u-1-of-2 u-1-of-3-bp1 u-1-of-4-bp2">
+              <img class="c-figure" src="img/defaultimg.jpg" alt="this is a default image">
+              <p>Title</p>
+              <p>Author</p>
+            </article>
+            <article class="o-layout__item u-1-of-2 u-1-of-3-bp1 u-1-of-4-bp2">
+              <img class="c-figure" src="img/defaultimg.jpg" alt="this is a default image">
+              <p>Title</p>
+              <p>Author</p>
+            </article>
+            <article class="o-layout__item u-1-of-2 u-1-of-3-bp1 u-1-of-4-bp2">
+              <img class="c-figure" src="img/defaultimg.jpg" alt="this is a default image">
+              <p>Title</p>
+              <p>Author</p>
+            </article>
+            <article class="o-layout__item u-1-of-2 u-1-of-3-bp1 u-1-of-4-bp2">
+              <img class="c-figure" src="img/defaultimg.jpg" alt="this is a default image">
+              <p>Title</p>
+              <p>Author</p>
+            </article>
+            <article class="o-layout__item u-1-of-2 u-1-of-3-bp1 u-1-of-4-bp2">
+              <img class="c-figure" src="img/defaultimg.jpg" alt="this is a default image">
+              <p>Title</p>
+              <p>Author</p>
+            </article>
+            <article class="o-layout__item u-1-of-2 u-1-of-3-bp1 u-1-of-4-bp2">
+              <img class="c-figure" src="img/defaultimg.jpg" alt="this is a default image">
+              <p>Title</p>
+              <p>Author</p>
+            </article> -->
+          </div>
+        </section>
+        <footer class="o-row o-row--md">
+          <div class="o-container">
+              <div class="c-footer">
+                  <div class="c-footer__logo">
+                    <p class="c-logo"><a href="index.html" class="c-logo__link">
+                      Book Conservation Chamber</a>
+                    </p>
+                  </div>
+                  <div class="c-footer__nav">
+                      <nav class="c-nav c-nav--meta">
+                          <ul class="o-list c-nav__list">
+                            <li class="c-nav__item"><a href="https://freyademuynck.be/portfolio/" target="_blank" rel="noopener noreferrer" class="c-nav__link c-nav__link--meta">Portfolio</a></li>
+                            <!-- <li class="c-nav__item"><a href="https://github.com/howest-mct/2020-2021-projectone-DeMuynckFreya" target="_blank" rel="noopener noreferrer" class="c-nav__link c-nav__link--meta">Github</a></li> -->
+                          </ul>
+                        </nav>
+                      </div>
+                      <div class="c-footer__nav">
+                        <nav class="c-nav c-nav--meta">
+                          <ul class="o-list c-nav__list">
+                            <!-- <li class="c-nav__item"><a href="#!" target="_blank" rel="noopener noreferrer" class="c-nav__link c-nav__link--meta">Instructable</a></li> -->
+                            <li class="c-nav__item"><a href="https://www.facebook.com/freya.demuynck.9" target="_blank" rel="noopener noreferrer" class="c-nav__link c-nav__link--meta">Facebook</a></li>
+                          </ul>
+                      </nav>
+                  </div>
+              </div>
+          </div>
+      </footer>
+  </div>
+  <aside class="c-mobile-nav">
+      <div class="c-mobile-nav__bg"></div>
+      <div class="c-mobile-nav__body">
+          <div class="c-mobile-nav__header">
+            <p class="c-logo"><a href="index.html" class="c-logo__link">
+              Book Conservation Chamber</a>
+            </p>
+              <button class="o-button-reset c-nav-trigger js-toggle-nav">
+                  <svg class="c-nav-trigger__svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                  </svg>
+              </button>
+          </div>
+          <div class="c-mobile-nav__nav c-mobile-nav__nav--main">
+              <nav class="c-nav">
+                  <ul class="o-list c-nav__list">
+                    <li class="c-nav__item"><a href="index.html" class="c-nav__link">Home</a></li>
+                    <li class="c-nav__item"><a href="history.html" class="c-nav__link">History</a></li>
+                    <li class="c-nav__item is-selected"><a href="books.html" class="c-nav__link">Books</a></li>
+                    <li class="c-nav__item"><a href="newbook.html" class="c-nav__link">New book</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </div>
+  </aside>
+</body>
+</html>

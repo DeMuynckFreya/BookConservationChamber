@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Book Conservation Chamber</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zgh8pul.css">
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/screen.css" />
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js" integrity="sha384-LzhRnpGmQP+lOvWruF/lgkcqD+WDVt9fU3H4BWmwP5u5LTmkUGafMcpZKNObVMLU" crossorigin="anonymous"></script>
+    <script src="script/app.js"></script> 
+    <script src="script/newbook.js"></script>
+  </head>
+  <body>
+    <div class="c-page">
+      <header class="o-row o-row--md o-row--header">
+          <div class="o-container">
+              <div class="c-header">
+                  <div class="c-header__logo">
+                      
+                        <h1 class="c-logo"><a href="index.html" class="c-logo__link">
+                          Book Conservation Chamber</a>
+                      </h1>
+                      
+                  </div>
+                  <div class="c-header__nav c-header__nav--main">
+                      <nav class="c-nav">
+                          <ul class="o-list c-nav__list">
+                              <li class="c-nav__item"><a href="index.html" class="c-nav__link">Home</a></li>
+                              <li class="c-nav__item"><a href="history.html" class="c-nav__link">History</a></li>
+                              <li class="c-nav__item"><a href="books.html" class="c-nav__link">Books</a></li>
+                              <li class="c-nav__item is-selected"><a href="newbook.html" class="c-nav__link">New book</a></li>
+                          </ul>
+                      </nav>
+                  </div>
+                
+                  <div class="c-header__mobile-nav-trigger">
+                      <button class="o-button-reset c-nav-trigger js-toggle-nav">
+                          <svg class="c-nav-trigger__svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                          </svg>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </header>
+        <section class="o-row o-row--lg u-pt-clear">
+          <div class="o-container">
+            
+            <div class="o-row o-row--lg ">
+              <!-- <input type="file" name="image" id="image"><br> -->
+              <label class="c-label" for="title">Title</label><br>
+              <input class="c-input" type="text" id="title" name="title" placeholder="Enter title" required><br>
+              <label class="c-label" for="fname">First name of author</label><br>
+              <input class="c-input" type="text" id="fname" name="fname" placeholder="Enter first name of author" required><br>
+              <label class="c-label" for="lname">Last name of author</label><br>
+              <input class="c-input" type="text" id="lname" name="lname" placeholder="Enter last name of author" required><br>
+              <label class="c-label" for="language">Language</label><br>
+              <select class="c-input"  id="language" name="language" placeholder="Select language" required><br>
+                  <option value="en">English</option>
+                  <option value="nl">Dutch</option>
+                  <option value="fr">French</option>
+                  <option value="de">German</option>
+              </select><br>
+              <label class="c-label" for="pages">Amount of pages</label><br>
+              <input class="c-input"  type="number" name="pages" id="pages" min="0" placeholder="Enter amount of pages" required><br>
+              <label class="c-label" for="isbn">ISBN</label><br>
+              <input class="c-input"  type="number" name="isbn" id="isbn" min="0" minlength="10" placeholder="Enter ISBN-number" required><br>
+              <label class="c-label" for="rfid">RFID</label><br>
+              <input  class="c-input" type="text" name="rfid" id="rfid" placeholder="Enter the ID of the RFID tag here" required><br>
+              <label class="c-label">Currently in the chamber</label><br>
+              <input class="c-radio" type="radio" name="inchamber" id="yes" value="1">
+              <label for="yes">Yes</label>
+              <input class="c-radio" type="radio" name="inchamber" id="no" value="0" checked>
+              <label for="no">No</label><br>
+              <div class="o-layout o-buttons"></div>
+      
+                  <button class="o-button-reset o-button o-layout__item js-save">Save</button>
+              </div>
+            </div>
+          </div>
+        
+        </section>
+        <footer class="o-row o-row--md">
+          <div class="o-container">
+              <div class="c-footer">
+                  <div class="c-footer__logo">
+                    <p class="c-logo"><a href="index.html" class="c-logo__link">
+                      Book Conservation Chamber</a>
+                    </p>
+                  </div>
+                  <div class="c-footer__nav">
+                      <nav class="c-nav c-nav--meta">
+                          <ul class="o-list c-nav__list">
+                            <li class="c-nav__item"><a href="https://freyademuynck.be/portfolio/" target="_blank" rel="noopener noreferrer" class="c-nav__link c-nav__link--meta">Portfolio</a></li>
+                            <!-- <li class="c-nav__item"><a href="https://github.com/howest-mct/2020-2021-projectone-DeMuynckFreya" target="_blank" rel="noopener noreferrer" class="c-nav__link c-nav__link--meta">Github</a></li> -->
+                          </ul>
+                        </nav>
+                      </div>
+                      <div class="c-footer__nav">
+                        <nav class="c-nav c-nav--meta">
+                          <ul class="o-list c-nav__list">
+                            <!-- <li class="c-nav__item"><a href="#!" target="_blank" rel="noopener noreferrer" class="c-nav__link c-nav__link--meta">Instructable</a></li> -->
+                            <li class="c-nav__item"><a href="https://www.facebook.com/freya.demuynck.9" target="_blank" rel="noopener noreferrer" class="c-nav__link c-nav__link--meta">Facebook</a></li>
+                          </ul>
+                      </nav>
+                  </div>
+              </div>
+          </div>
+      </footer>
+  </div>
+  <aside class="c-mobile-nav">
+      <div class="c-mobile-nav__bg"></div>
+      <div class="c-mobile-nav__body">
+          <div class="c-mobile-nav__header">
+            <p class="c-logo"><a href="index.html" class="c-logo__link">
+              Book Conservation Chamber</a>
+            </p>
+              <button class="o-button-reset c-nav-trigger js-toggle-nav">
+                  <svg class="c-nav-trigger__svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                  </svg>
+              </button>
+          </div>
+          <div class="c-mobile-nav__nav c-mobile-nav__nav--main">
+              <nav class="c-nav">
+                  <ul class="o-list c-nav__list">
+                    <li class="c-nav__item"><a href="index.html" class="c-nav__link">Home</a></li>
+                    <li class="c-nav__item"><a href="history.html" class="c-nav__link">History</a></li>
+                    <li class="c-nav__item"><a href="books.html" class="c-nav__link">Books</a></li>
+                    <li class="c-nav__item is-selected"><a href="newbook.html" class="c-nav__link">New book</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </div>
+  </aside>
+</body>
+</html>
